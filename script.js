@@ -3,7 +3,7 @@ function ver(){
 }
 $(function() {
   liveFilter.build($("#liveFilter"), [1, 2]);
-  
+
 
 
 });
@@ -22,7 +22,7 @@ var liveFilter = function() {
     //Create an array and populate it with key codes that should not cause shake effects
     noShakeCharacters = [8, 45, 46], //backspace, insert, delete
 
-    //Create an array and populate it with key codes that don't trigger an action 
+    //Create an array and populate it with key codes that don't trigger an action
     characterExclusions = [13, 20, 27, 33, 34, 37, 39, 35, 36, 16, 17, 18, 144, 145], // enter, caps, esc, page up, page down, left, right, home, end, shift, ctrl, alt, num lock, scroll lock
 
     //Create the filter markup and set up events and datasources
@@ -30,7 +30,7 @@ var liveFilter = function() {
 
       if (typeof liveFilter !== "undefined" && liveFilter.length > 0) {
 
-        liveFilter.wrap('<div class="liveFilter"></div>').parent().prepend('<div class="liveFilterContainer"><div class="group"><input type="text" class="liveFilterInput" value="" placeholder="Ingrese nombre completo del alumno" /><a href="#" class="clearField" title="Clear Filter">x</a></div></div><div class="noResults"><strong>Lo siento.</strong> Aun sin resultados.</div>');
+        liveFilter.wrap('<div class="liveFilter"></div>').parent().prepend('<div class="liveFilterContainer"><div class="group">Nombre del alumno: <input type="text" class="liveFilterInput" value="" placeholder="Ingrese nombre completo del alumno" /><a href="#" class="clearField" title="Clear Filter">x</a></div></div><div class="noResults"><strong>Lo siento.</strong> Aun sin resultados.</div>');
 
         wrapper = liveFilter.parent(),
           inputField = wrapper.find("input.liveFilterInput"),
@@ -89,7 +89,7 @@ var liveFilter = function() {
     },
 
     //This function (when called) filters the rows based on the data in the datasource array
-    filterRows = function(key) {      
+    filterRows = function(key) {
 
       if ($.inArray(key.keyCode, characterExclusions) === -1) {
 
@@ -105,8 +105,8 @@ var liveFilter = function() {
             /*RE = new RegExp(liveFilterValue, "i");*/
             RE = liveFilterValue;
 
-          // Check the value entered against a regular expression matched with the column data. If a match exists add the row to a new array      
-          
+          // Check the value entered against a regular expression matched with the column data. If a match exists add the row to a new array
+
           for (var i = 0; i < datasource.length; i++) {
 
 /*if (datasource[i].match(RE)) {*/
@@ -129,7 +129,7 @@ var liveFilter = function() {
             grid.show();
             gridRows.hide();
             document.getElementById("liveFilter").style.visibility = "visible";
-            
+
 
             if (zeroResults.is(":visible")) {
               zeroResults.slideUp(150);
