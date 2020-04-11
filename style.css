@@ -5,6 +5,12 @@
   -moz-border-radius: 5px;
   background: #fff;
 }
+table{
+  background-image: url("tableback.jpg");
+  background-color: rgba(0,0,0,.5);
+  background-size: 600px 400px;
+
+}
 
 .liveFilter .liveFilterContainer {
   border: solid 1px #ccc;
@@ -55,6 +61,10 @@
 .liveFilter .liveFilterList tr th:first-child,
 .liveFilter .liveFilterList tr td:first-child {
   padding-left: 5px;
+  padding-right: 5px;
+}
+td{
+  padding-right: 10px;
 }
 
 .liveFilter .liveFilterList tr th {
@@ -64,7 +74,10 @@
 
 .liveFilter .liveFilterList tr td {
   border-top: solid 1px #eee;
-  padding: 3px 0;
+  padding: 20px 0;
+  padding-right: 25px;
+  border-right: solid 2px #eee;
+  padding-left: 4px;
   color: #333;
 }
 
@@ -107,4 +120,14 @@ h1 strong {
 .explanation p {
   color: #fff;
   font-size: 0.8rem;
+}
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   height: 40px;
+   background-color: #e64a19;;
+   color: white;
+   text-align: center;
 }
