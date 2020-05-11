@@ -142,14 +142,11 @@
   <script src="popper.min.js"></script>
   <script src="bootstrap.min.js"></script>
 <script>
-+function ($) {
-    'use strict';
-    $(document).on('click', 'navbar-collapse.in', function (e) {
-        if ($(e.target).is('a')) {
-            $(this).collapse('toggle');
-        }
-    });
-}(jQuery);
+$(document).ready(function () {
+  $(".navbar-nav li a").click(function(event) {
+    $(".navbar-collapse").collapse('hide');
+  });
+});
 </script>
 
 </body>
